@@ -1,5 +1,4 @@
 const shelterReducer = (state = {shelters: []}, action) => {
-  return action.payload
 }
 
 
