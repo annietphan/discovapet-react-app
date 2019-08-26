@@ -7,4 +7,8 @@ export function fetchShelters(action) {
   //     payload: data
   //   }))
   // }
+
+  fetch('http://localhost:300/api/v1/shelters')
+  .then(resp => resp.json())
+  .then(data => console.log(data))
 }
