@@ -1,13 +1,15 @@
 import React from 'react';
+
+import {connect} from 'react-redux'
 import './App.css';
 
 class App extends React.Component {
 
-  // componentDidMount(){
-  //   fetch('http://localhost:3000/api/v1/shelters')
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))
-  // }
+  componentDidMount(){
+    fetch('http://localhost:3000/api/v1/shelters')
+    .then(response => response.json())
+    .then(data => console.log(data))
+  }
 
   render() {
     return(
@@ -18,4 +20,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default connect()(App)
