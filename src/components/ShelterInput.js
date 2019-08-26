@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
+import {addShelter} from '../actions/addShelter'
 
 class ShelterInput extends Component {
 
@@ -19,7 +21,7 @@ class ShelterInput extends Component {
   }
 
   handleOnSubmit = (event) => {
-    
+
   }
 
   render() {
@@ -47,4 +49,4 @@ class ShelterInput extends Component {
   }
 }
 
-export default ShelterInput
+export default connect(null, {addShelter})(ShelterInput)
