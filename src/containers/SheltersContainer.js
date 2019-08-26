@@ -13,8 +13,7 @@ class SheltersContainer extends Component {
   render() {
     return(
       <div>
-        Shelters Container
-        <ShelterInput />
+        <ShelterInput /><br /><br />
         <Shelters shelters={this.props.shelters}/>
       </div>
     )
