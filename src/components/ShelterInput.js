@@ -2,6 +2,15 @@ import React, { Component } from 'react'
 
 class ShelterInput extends Component {
 
+  state = {
+    name: '',
+    street_address: '',
+    city: '',
+    state: '',
+    zipcode: '',
+    email: '',
+    number: ''
+  }
 
   render() {
     return(
