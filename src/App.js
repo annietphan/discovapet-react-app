@@ -1,14 +1,13 @@
 import React from 'react';
 
 import {connect} from 'react-redux'
+import {fetchShelters} from './actions/fetchShelters'
 import './App.css';
 
 class App extends React.Component {
 
   componentDidMount(){
-    fetch('http://localhost:3000/api/v1/shelters')
-    .then(response => response.json())
-    .then(data => console.log(data))
+    this.props.fetchShelters({type: 'FETCH_SHELTERS', payload: {name: 'Ward-Howe'}})
   }
 
   render() {
@@ -20,4 +19,5 @@ class App extends React.Component {
   }
 }
 
-export default connect()(App)
+
+export default connect(null, {fetchShelters})(App)
