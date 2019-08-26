@@ -3,7 +3,9 @@ import React from 'react'
 const Shelters = (props) => {
   return (
     <div>
-      List of shelters
+      {props.shelters.map(shelter =>
+        <li key={shelter.id}>{shelter.name} - {shelter.email}</li>
+      )}
     </div>
   )
 }

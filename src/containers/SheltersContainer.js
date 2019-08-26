@@ -7,7 +7,7 @@ import Shelters from '../components/Shelters'
 class SheltersContainer extends Component {
 
   componentDidMount(){
-
+    this.props.fetchShelters()
   }
 
   render() {
@@ -15,7 +15,7 @@ class SheltersContainer extends Component {
       <div>
         Shelters Container
         <ShelterInput />
-        <Shelters />
+        <Shelters shelters={this.props.shelters}/>
       </div>
     )
   }
@@ -23,7 +23,7 @@ class SheltersContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    // shelters: state.shelters
+    shelters: state.shelters
   }
 }
 

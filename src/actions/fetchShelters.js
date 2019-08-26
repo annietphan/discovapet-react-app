@@ -1,14 +1,11 @@
 export function fetchShelters(action) {
-  // return (dispatch) => {
-  //   fetch('http://localhost:3000/api/v1/shelters')
-  //   .then(res => res.json())
-  //   .then(data => dispatch({
-  //     type: 'FETCH_SHELTERS',
-  //     payload: data
-  //   }))
-  // }
+  return (dispatch) => {
+    fetch('http://localhost:3000/api/v1/shelters')
+    .then(res => res.json())
+    .then(shelters => dispatch({
+      type: 'FETCH_SHELTERS',
+      payload: shelters
+    }))
+  }
 
-  fetch('http://localhost:300/api/v1/shelters')
-  .then(resp => resp.json())
-  .then(data => console.log(data))
 }
