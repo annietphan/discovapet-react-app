@@ -5,10 +5,11 @@ import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
 import './index.css';
 import App from './App';
+import shelterReducer from './reducers/shelterReducer'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
+const store = createStore(shelterReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>
