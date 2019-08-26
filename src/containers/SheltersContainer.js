@@ -16,4 +16,10 @@ class SheltersContainer extends Component {
   }
 }
 
-export default connect()(SheltersContainer)
+const mapStateToProps = state => {
+  return {
+    shelters: state.shelters
+  }
+}
+
+export default connect(mapStateToProps)(SheltersContainer)
