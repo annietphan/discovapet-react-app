@@ -3,11 +3,11 @@ import './App.css';
 
 class App extends React.Component {
 
-  componentDidMount(){
-    fetch('http://localhost:3000/api/v1/shelters')
-    .then(response => response.json())
-    .then(data => console.log(data))
-  }
+  // componentDidMount(){
+  //   fetch('http://localhost:3000/api/v1/shelters')
+  //   .then(response => response.json())
+  //   .then(data => console.log(data))
+  // }
 
   render() {
     return(
