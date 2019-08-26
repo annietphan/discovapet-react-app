@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux'
 import SheltersContainer from './containers/SheltersContainer'
 import './App.css';
 
@@ -19,4 +18,4 @@ class App extends React.Component {
 }
 
 
-export default connect()(App)
+export default App
