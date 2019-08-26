@@ -18,11 +18,15 @@ class ShelterInput extends Component {
     })
   }
 
+  handleOnSubmit = (event) => {
+    
+  }
+
   render() {
     return(
       <div className="shelterForm">
         <h3>Add Organization:</h3>
-        <form>
+        <form onSubmit={this.handleOnSubmit}>
           <label>Organization Name:</label><br />
             <input type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.handleOnChange}/><br />
 
