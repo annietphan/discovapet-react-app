@@ -23,6 +23,15 @@ class ShelterInput extends Component {
   handleOnSubmit = (event) => {
     event.preventDefault()
     this.props.addShelter(this.state)
+    this.setState({
+      name: '',
+      street_address: '',
+      city: '',
+      state: '',
+      zipcode: '',
+      email: '',
+      number: ''
+    })
   }
 
   render() {
