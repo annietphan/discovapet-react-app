@@ -16,7 +16,17 @@ const shelterReducer = (state = {shelters: []}, action) => {
         }
       })
       return {...state, shelters: addedShelters}
-      
+
+    case 'DELETE_PET':
+      const deletedShelters = state.shelters.map(shelter => {
+        if (shelter.id === action.payload.id) {
+          return action.payload
+        } else {
+          return state
+        }
+      })
+      return {...state, shelters: deletedShelters}
+
     default:
       return state
   }
