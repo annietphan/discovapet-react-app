@@ -5,7 +5,6 @@ const Shelter = (props) => {
   console.log(props)
 
   const shelter = props.shelters[props.match.params.id - 1]
-  // console.log(shelter)
 
   return (
     <div>
