@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {Route} from 'react-router-dom'
 import {fetchShelters} from '../actions/fetchShelters'
 import ShelterInput from '../components/ShelterInput'
 import Shelters from '../components/Shelters'
@@ -13,6 +14,7 @@ class SheltersContainer extends Component {
   render() {
     return(
       <div>
+        <Route path="/shelters/new" component={ShelterInput}/>
         <ShelterInput /><br /><br />
         <Shelters shelters={this.props.shelters}/>
       </div>
