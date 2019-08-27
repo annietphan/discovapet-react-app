@@ -9,7 +9,7 @@ class PetsContainer extends Component {
       <div>
       PetsContainer
         <PetInput />
-        <Pets />
+        <Pets pets={this.props.shelter && this.props.shelter.pets}/>
       </div>
     )
   }
