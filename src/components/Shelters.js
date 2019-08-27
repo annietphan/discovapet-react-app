@@ -1,6 +1,6 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
-import Shelter from './Shelter'
+import { Link} from 'react-router-dom'
+// import Shelter from './Shelter'
 
 const Shelters = (props) => {
   return (

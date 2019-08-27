@@ -1,11 +1,12 @@
 import React from 'react'
-import {Redirect} from 'react-router-dom'
+// import {Redirect} from 'react-router-dom'
 import PetsContainer from '../containers/PetsContainer'
 
 const Shelter = (props) => {
   console.log(props)
 
   // const shelter = props.shelters[props.match.params.id - 1]
+  // eslint-disable-next-line
   const shelter = props.shelters.filter(shelter => shelter.id == props.match.params.id)[0]
 
   return (
