@@ -1,14 +1,21 @@
 import React from 'react'
 import { Link} from 'react-router-dom'
 // import Shelter from './Shelter'
+import ShelterCard from './ShelterCard'
 
 const Shelters = (props) => {
   return (
     <div>
       <h3>All Shelters</h3>
-      {props.shelters.map(shelter =>
-        <div key={shelter.id}><Link to={`/shelters/${shelter.id}`}>{shelter.name}</Link></div>
-      )}
+      <div className="container-fluid d-flex justify-content-center">
+        <div className='row'>
+          {props.shelters.map(shelter =>
+            <div className='col-md-4' key={shelter.id}><Link to={`/shelters/${shelter.id}`}><ShelterCard shelter={shelter}/></Link></div>
+          )}
+        </div>
+
+      </div>
+
     </div>
   )
 }

@@ -6,6 +6,7 @@ import {Provider} from 'react-redux'
 import './index.css';
 import App from './App';
 import shelterReducer from './reducers/shelterReducer'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 

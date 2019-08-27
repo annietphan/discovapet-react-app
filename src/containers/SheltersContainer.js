@@ -14,7 +14,7 @@ class SheltersContainer extends Component {
 
   render() {
     return(
-      <div>
+      <div className="container-fluid d-flex justify-content-center">
         <Route path="/shelters/new" component={ShelterInput} />
         <Route path="/shelters/:id" render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters}/>} />
         <Route exact path='/shelters' render={ (routerProps) => <Shelters {...routerProps} shelters={this.props.shelters} /> } />
