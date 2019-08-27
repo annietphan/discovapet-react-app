@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
 class PetInput extends Component {
+
   render() {
     return(
       <div>
@@ -10,4 +12,4 @@ class PetInput extends Component {
   }
 }
 
-export default PetInput
+export default connect()(PetInput)
