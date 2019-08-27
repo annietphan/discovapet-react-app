@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {addPet} from '../actions/addPet'
 
 class PetInput extends Component {
 
@@ -60,7 +61,7 @@ class PetInput extends Component {
 }
 
 
-export default connect(null)(PetInput)
+export default connect(null, {addPet})(PetInput)
 
 
 // figure out checkbox values later
