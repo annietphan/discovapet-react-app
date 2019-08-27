@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route, Link} from 'react-router-dom'
 import Shelter from './Shelter'
 
 const Shelters = (props) => {
@@ -6,7 +7,7 @@ const Shelters = (props) => {
     <div>
       <h3>All Shelters</h3>
       {props.shelters.map(shelter =>
-        <div key={shelter.id}><Shelter shelter={shelter}/></div>
+        <div key={shelter.id}><Link to={`/shelters/${shelter.id}`}>{shelter.name}</Link></div>
       )}
     </div>
   )

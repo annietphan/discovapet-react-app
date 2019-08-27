@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {fetchShelters} from '../actions/fetchShelters'
 import ShelterInput from '../components/ShelterInput'
 import Shelters from '../components/Shelters'
@@ -15,9 +15,11 @@ class SheltersContainer extends Component {
   render() {
     return(
       <div>
-        <Route path="/shelters/new" component={ShelterInput} />
-        <Route path="/shelters/:id" render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters}/>} />
-        <Route exact path='/shelters' render={ (routerProps) => <Shelters {...routerProps} shelters={this.props.shelters} /> } />
+        <Switch>
+          <Route path="/shelters/new" component={ShelterInput} />
+          <Route path="/shelters/:id" render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters}/>} />
+          <Route exact path='/shelters' render={ (routerProps) => <Shelters {...routerProps} shelters={this.props.shelters} /> } />
+        </Switch>
       </div>
     )
   }
