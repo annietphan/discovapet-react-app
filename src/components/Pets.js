@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {deletePet} from '../actions/deletePet'
 
 const Pets = (props) => {
 
@@ -7,7 +9,7 @@ const Pets = (props) => {
   const handleDelete = () => {
 
   }
-  
+
   return (
     <div>
       <p>List of Pets</p>
@@ -21,4 +23,4 @@ const Pets = (props) => {
   )
 }
 
-export default Pets
+export default connect(null, {deletePet})(Pets)
