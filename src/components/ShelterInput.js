@@ -21,7 +21,8 @@ class ShelterInput extends Component {
   }
 
   handleOnSubmit = (event) => {
-
+    event.preventDefault()
+    this.props.addShelter(this.state)
   }
 
   render() {
