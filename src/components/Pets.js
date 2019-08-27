@@ -6,8 +6,8 @@ const Pets = (props) => {
 
   console.log(props.pets)
 
-  const handleDelete = () => {
-
+  const handleDelete = (pet) => {
+    props.deletePet(pet.id, pet.shelter_id)
   }
 
   return (
@@ -16,7 +16,7 @@ const Pets = (props) => {
       {props.pets && props.pets.map(pet =>
         <li key={pet.id}>
           {pet.name}
-          <button onClick={handleDelete}>x</button>
+          <button onClick={() => handleDelete(pet)}>x</button>
         </li>
       )}
     </div>
