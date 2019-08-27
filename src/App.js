@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
-        App
+        PetFinder Clone
         <SheltersContainer />
       </div>
     )
