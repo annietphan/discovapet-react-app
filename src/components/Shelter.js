@@ -15,7 +15,7 @@ const Shelter = (props) => {
       <p>{shelter ? shelter.city : null}, {shelter ? shelter.state : null} {shelter ? shelter.zipcode : null}</p>
       <p>Animals: {shelter ? shelter.pets.length : null}</p><br />
       <h4>Pets:</h4>
-      <PetsContainer />
+      <PetsContainer shelter={shelter}/>
     </div>
   )
 }
