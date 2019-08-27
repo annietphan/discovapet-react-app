@@ -5,15 +5,17 @@ class PetInput extends Component {
 
   state = {
     name: '',
-    kind: '',
-    gender: '',
+    kind: 'dog',
+    gender: 'female',
+    breed: '',
     size: '',
-    age: '',
-    isVaccinated: '',
-    isHouseTrained: '',
-    goodWithCats: '',
-    goodWithDogs: '',
-    goodWithKids: ''
+    age: ''
+  }
+
+  handleOnChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
   render() {
@@ -22,33 +24,30 @@ class PetInput extends Component {
         <h4>Add Pet:</h4>
         <form>
           <label>Name:</label>
-          <input type="text" placeholder="Name" /><br />
+          <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleOnChange}/><br />
+
           <label>Pet Type:</label>
-            <select>
+            <select name="kind" value={this.state.kind} onChange={this.handleOnChange}>
               <option>dog</option>
               <option>cat</option>
             </select><br />
+
           <label>Gender:</label>
-            <select>
+            <select name="gender" value={this.state.gender} onChange={this.handleOnChange}>
               <option>male</option>
               <option>female</option>
             </select><br />
+
           <label>Breed:</label>
-          <input type="text" placeholder="Breed" /><br />
+          <input type="text" placeholder="Breed" name="breed" value={this.state.breed} onChange={this.handleOnChange}/><br />
+
           <label>Size:</label>
-          <input type="text" placeholder="Size" /><br />
+          <input type="text" placeholder="Size" name="size" value={this.state.size} onChange={this.handleOnChange}/><br />
+
           <label>Age:</label>
-          <input type="text" placeholder="Age" /><br />
-          <label>Vaccinations up to date?</label>
-          <input type="checkbox" /><br />
-          <label>House-trained?</label>
-          <input type="checkbox"  /><br />
-          <label>Good with cats?</label>
-          <input type="checkbox"  /><br />
-          <label>Good with dogs?</label>
-          <input type="checkbox"  /><br />
-          <label>Good with kids?</label>
-          <input type="checkbox"  /><br />
+          <input type="text" placeholder="Age" name="age" value={this.state.age} onChange={this.handleOnChange}/><br />
+
+
           <input type="submit" />
         </form>
       </div>
@@ -56,4 +55,28 @@ class PetInput extends Component {
   }
 }
 
+
 export default connect(null)(PetInput)
+
+
+// figure out checkbox values later
+// <label>Vaccinations up to date?</label>
+// <input type="checkbox" name="isVaccinated" checked={this.state.isVaccinated} value={this.state.isVaccinated} onChange={this.handleOnChange}/><br />
+//
+// <label>House-trained?</label>
+// <input type="checkbox" name="isHouseTrained" value={this.state.isHouseTrained} onChange={this.handleOnChange}/><br />
+//
+// <label>Good with cats?</label>
+// <input type="checkbox" name="goodWithCats" value={this.state.goodWithCats} onChange={this.handleOnChange}/><br />
+//
+// <label>Good with dogs?</label>
+// <input type="checkbox" name="goodWithDogs" value={this.state.goodWithDogs} onChange={this.handleOnChange}/><br />
+//
+// <label>Good with kids?</label>
+// <input type="checkbox" name="goodWithKids" value={this.state.goodWithKids} onChange={this.handleOnChange}/><br />
+// ,
+// isVaccinated: true,
+// isHouseTrained: true,
+// goodWithCats: true,
+// goodWithDogs: true,
+// goodWithKids: true
