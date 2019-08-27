@@ -3,6 +3,19 @@ import {connect} from 'react-redux'
 
 class PetInput extends Component {
 
+  state = {
+    name: '',
+    kind: '',
+    gender: '',
+    size: '',
+    age: '',
+    isVaccinated: '',
+    isHouseTrained: '',
+    goodWithCats: '',
+    goodWithDogs: '',
+    goodWithKids: ''
+  }
+
   render() {
     return(
       <div>
