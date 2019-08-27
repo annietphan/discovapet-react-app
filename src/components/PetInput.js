@@ -21,7 +21,7 @@ class PetInput extends Component {
 
   handleOnSubmit = (e) => {
     e.preventDefault()
-    this.props.addPet(this.state, this.props.id)
+    this.props.addPet(this.state, this.props.shelter.id)
     this.setState({
       name: '',
       kind: 'dog',
