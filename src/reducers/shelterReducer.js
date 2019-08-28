@@ -8,6 +8,7 @@ const shelterReducer = (state = {shelters: []}, action) => {
       return {...state, shelters: [...state.shelters, action.payload]}
 
     case 'ADD_PET':
+
       const addedShelters = state.shelters.map( shelter => {
         if (shelter.id === action.payload.id) {
           return action.payload
