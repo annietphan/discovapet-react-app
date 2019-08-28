@@ -9,6 +9,13 @@ class PetCard extends React.Component {
     }
   }
 
+  increment = () => {
+    const increasedCount = this.state.count + 1
+    this.setState({
+      count: increasedCount
+    })
+  }
+
   render() {
     return(
       <div className="card text-center">
@@ -16,7 +23,8 @@ class PetCard extends React.Component {
           <img src={img2} alt="" className="card-img-bottom" />
         </div>
         <div className="card-header text-dark">
-          <p>{this.props.pet.name}</p>
+          <h4>{this.props.pet.name}</h4>
+          <p onClick={this.increment}>Votes: {this.state.count}</p>
         </div>
       </div>
     )
