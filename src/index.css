@@ -9,6 +9,26 @@ body {
 
 }
 
+.cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+    background-color: #e1e1ea;
+    color: #000000;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
+    color: #333;
+    text-shadow: none;
+    background-color: #fff;
+    border: .05rem solid #fff;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
 
 
 .card:hover{
