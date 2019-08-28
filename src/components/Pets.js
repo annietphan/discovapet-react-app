@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route, Link, Switch} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {deletePet} from '../actions/deletePet'
+// import {deletePet} from '../actions/deletePet'
 import PetCard from './PetCard'
 import Pet from './Pet'
 
@@ -9,9 +9,9 @@ const Pets = (props) => {
 
   // console.log(props.pets)
 
-  const handleDelete = (pet) => {
-    props.deletePet(pet.id, pet.shelter_id)
-  }
+  // const handleDelete = (pet) => {
+  //   props.deletePet(pet.id, pet.shelter_id)
+  // }
 
   return (
     <div>
@@ -23,7 +23,7 @@ const Pets = (props) => {
 
               <Link to={`/shelters/${pet.shelter_id}/pets/${pet.id}`}><PetCard pet={pet}/></Link>
               <Route exact path={`/shelters/${pet.shelter_id}/pets/${pet.id}`} render={(routerProps)=> <Pet pet={pet}/>} />
-              <button onClick={() => handleDelete(pet)}>x</button>
+              {/* <button onClick={() => handleDelete(pet)}>x</button>*/}
             </div>
           )}
         </div>
@@ -32,7 +32,7 @@ const Pets = (props) => {
   )
 }
 
-export default connect(null, {deletePet})(Pets)
+export default connect(null)(Pets)
 //
 //
 // <Switch>

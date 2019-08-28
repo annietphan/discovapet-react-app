@@ -1,17 +1,24 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {deletePet} from '../actions/deletePet'
 
-const Pet = ({pet}) => {
+const Pet = (props) => {
   const capitalize = {
     textTransform: 'capitalize'
   }
+
+  const handleDelete = (pet) => {
+    props.deletePet(pet.id, pet.shelter_id)
+  }
   return(
-    <>
-    <p style={capitalize}>{pet.gender} {pet.kind}</p>
-    <p>{pet.size} {pet.breed}</p>
-    <p></p>
-    </>
+    <React.Fragment>
+    <p style={capitalize}>{props.pet.gender} {props.pet.kind}</p>
+    <p style={capitalize}>{props.pet.size} {props.pet.breed}</p>
+    <p style={capitalize}>Age: {props.pet.age}</p>
+    <button onClick={() => handleDelete(props.pet)}>delete</button>
+    </React.Fragment>
   )
 
 }
 
-export default Pet
+export default connect(null, {deletePet})(Pet)
