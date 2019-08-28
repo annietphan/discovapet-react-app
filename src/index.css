@@ -9,16 +9,13 @@ body {
 
 }
 
-.sheltercard{
-  width: 20rem;
-  background: lightgrey;
-}
 
-.sheltercard:hover{
+
+.card:hover{
   box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253)!important;
 }
 
-.sheltercard-body{
+.card-body{
   padding: 3rem 0 !important;
 }
 

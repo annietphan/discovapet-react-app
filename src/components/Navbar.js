@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-
+// import Navbar from 'react-bootstrap/Navbar'
 const link = {
   width: '100px',
   padding: '12px',
@@ -23,6 +23,10 @@ const Nav = () => {
 
 
 export default Nav
+
+
+
+
 
 
 // <nav className="navbar navbar-expand-lg navbar-light bg-light">
