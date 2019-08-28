@@ -11,7 +11,9 @@ const Shelters = (props) => {
       <div className="container-fluid d-flex justify-content-center">
         <div className='row'>
           {props.shelters.map(shelter =>
-            <div className='col-md-4' key={shelter.id}><Link to={`/shelters/${shelter.id}`}><ShelterCard shelter={shelter}/></Link></div>
+            <div className='col-md-4' key={shelter.id}>
+              <Link to={`/shelters/${shelter.id}`}><ShelterCard shelter={shelter}/></Link>
+            </div>
           )}
         </div>
 

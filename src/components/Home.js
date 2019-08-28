@@ -3,8 +3,8 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='home'>
-      <h1>PetFinder // Where Pets Find Their People</h1>
-      <h3>This is the homepage</h3>
+      <h3>Discov-A-Pet</h3>
+      <p>This is the homepage</p>
     </div>
   )
 }

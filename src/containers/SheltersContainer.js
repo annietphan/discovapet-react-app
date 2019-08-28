@@ -17,7 +17,7 @@ class SheltersContainer extends Component {
     return(
       <div className="container-fluid d-flex justify-content-center">
         <Switch>
-        <Route exact path="/shelters/:id/pets/:id" render={(routerProps) => <Pet {...routerProps} shelters={this.props.shelters} />} />
+        {/*<Route path="/shelters/:id/pets/:id" render={(routerProps)=> <Pet {...routerProps} shelters={this.props.shelters}/>}/>*/}
         <Route path="/shelters/new" component={ShelterInput} />
         <Route path="/shelters/:id" render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters}/>} />
         <Route exact path='/shelters' render={ (routerProps) => <Shelters {...routerProps} shelters={this.props.shelters} /> } />
