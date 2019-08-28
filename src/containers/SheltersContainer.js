@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import {fetchShelters} from '../actions/fetchShelters'
 import ShelterInput from '../components/ShelterInput'
 import Shelters from '../components/Shelters'
 import Shelter from '../components/Shelter'
+import Pet from '../components/Pet'
 
 class SheltersContainer extends Component {
 
@@ -15,10 +16,13 @@ class SheltersContainer extends Component {
   render() {
     return(
       <div className="container-fluid d-flex justify-content-center">
+        <Switch>
+        <Route exact path="/shelters/:id/pets/:id" render={(routerProps) => <Pet {...routerProps} shelters={this.props.shelters} />} />
         <Route path="/shelters/new" component={ShelterInput} />
         <Route path="/shelters/:id" render={(routerProps) => <Shelter {...routerProps} shelters={this.props.shelters}/>} />
         <Route exact path='/shelters' render={ (routerProps) => <Shelters {...routerProps} shelters={this.props.shelters} /> } />
-      </div>
+        </Switch>
+    </div>
     )
   }
 }
