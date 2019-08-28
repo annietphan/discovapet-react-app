@@ -12,7 +12,7 @@ const Pets = (props) => {
 
   return (
     <div>
-      <p>List of Pets</p>
+      <h4>Our Adoptable Pets</h4>
       {props.pets && props.pets.map(pet =>
         <li key={pet.id}>
           {pet.name}

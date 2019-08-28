@@ -6,10 +6,10 @@ class PetsContainer extends Component {
 
   render() {
     return(
-      <div>
-      PetsContainer
+      <div className="container">
+        <Pets pets={this.props.shelter && this.props.shelter.pets}/><br /><br />
         <PetInput shelter={this.props.shelter}/>
-        <Pets pets={this.props.shelter && this.props.shelter.pets}/>
+
       </div>
     )
   }
