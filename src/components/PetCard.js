@@ -1,14 +1,14 @@
 import React from 'react'
-import img1 from '../assets/petpoplogo.jpg'
+import img2 from '../assets/IMG_6415.jpg'
 
 const PetCard = props => {
   return(
     <div className='petcard text-center'>
       <div className='overflow'>
-        <img src={img1} alt=""  className="card-img-top"/>
+        <img src={img2} alt=""  className="card-img-top"/>
       </div>
       <div className='petcard-body text-dark'>
-        <p>{props.shelter.name}</p>
+        <p>{props.pet.name}</p>
       </div>
     </div>
   )

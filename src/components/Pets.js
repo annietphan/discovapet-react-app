@@ -2,6 +2,7 @@ import React from 'react'
 import {Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {deletePet} from '../actions/deletePet'
+import PetCard from './PetCard'
 
 const Pets = (props) => {
 
@@ -14,12 +15,16 @@ const Pets = (props) => {
   return (
     <div>
       <h4>Adoptable Pets:</h4>
-      {props.pets && props.pets.map(pet =>
-        <li key={pet.id}>
-          {pet.name}
-          <button onClick={() => handleDelete(pet)}>x</button>
-        </li>
-      )}
+      <div className="container-fluid d-flex justify-content-center">
+        <div className='row'>
+          {props.pets && props.pets.map(pet =>
+            <div className='col-md-4' key={pet.id}>
+              <PetCard pet={pet}/>
+              <button onClick={() => handleDelete(pet)}>x</button>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
