@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import {addShelter} from '../actions/addShelter'
+import {Redirect} from 'react-router-dom'
 
 class ShelterInput extends Component {
 
@@ -32,6 +33,7 @@ class ShelterInput extends Component {
       email: '',
       number: ''
     })
+    this.props.history.push('/shelters')
   }
 
   render() {

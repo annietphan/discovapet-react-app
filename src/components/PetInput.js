@@ -10,12 +10,17 @@ class PetInput extends Component {
     gender: 'female',
     breed: '',
     size: '',
-    age: ''
+    age: '',
+    isVaccinated: ''
   }
 
   handleOnChange = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    const vac = e.target.name
     this.setState({
       [e.target.name]: e.target.value
+
+
     })
   }
 
@@ -60,6 +65,9 @@ class PetInput extends Component {
 
           <label>Age:</label>
           <input type="text" placeholder="Age" name="age" value={this.state.age} onChange={this.handleOnChange}/><br />
+
+          <label>Vaccinated?</label>
+          <input type="checkbox" name="isVaccinated" checked={this.state.isVaccianted}  onChange={this.handleOnChange}/><br/>
 
 
           <input type="submit" />
