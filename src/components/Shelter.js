@@ -11,8 +11,10 @@ const Shelter = ({match, shelters}) => {
   const shelter = shelters[match.params.id - 1]
   if (shelter) {
     return(
-      <div className="shelter">
-        <h2>{shelter.name}</h2>
+      <div>
+        <h3>{shelter.name}</h3>
+        <p>{shelter.street_address}</p>
+        <p>{shelter.city}, {shelter.state} {shelter.zipcode}</p>
       </div>
     )
   } else {
