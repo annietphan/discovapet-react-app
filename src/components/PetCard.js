@@ -9,10 +9,17 @@ class PetCard extends React.Component {
     }
   }
 
-  increment = () => {
+  upVote = () => {
     const increasedCount = this.state.count + 1
     this.setState({
       count: increasedCount
+    })
+  }
+
+  downVote = () => {
+    const decreasedCount = this.state.count -1
+    this.setState({
+      count: decreasedCount
     })
   }
 
@@ -24,7 +31,7 @@ class PetCard extends React.Component {
         </div>
         <div className="card-header text-dark">
           <h4>{this.props.pet.name}</h4>
-          <p onClick={this.increment}>Votes: {this.state.count}</p>
+          <p><button onClick={this.downVote}>-</button> Votes: {this.state.count} <button onClick={this.upVote}>+</button></p>
         </div>
       </div>
     )
