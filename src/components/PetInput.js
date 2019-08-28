@@ -35,7 +35,7 @@ class PetInput extends Component {
   render() {
     return(
       <div>
-        <h4>Add Pet:</h4>
+        <h4>List New Pet:</h4>
         <form onSubmit={this.handleOnSubmit}>
           <label>Name:</label>
           <input type="text" placeholder="Name" name="name" value={this.state.name} onChange={this.handleOnChange}/><br />

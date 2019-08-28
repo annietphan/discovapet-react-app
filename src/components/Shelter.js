@@ -19,8 +19,13 @@ const Shelter = ({match, shelters}) => {
         </div>
         <div className="col-md-8">
           <h3>{shelter.name}</h3>
-          <p>{shelter.street_address}</p>
-          <p>{shelter.city}, {shelter.state} {shelter.zipcode}</p>
+          <p>{shelter.street_address}<br />
+          {shelter.city}, {shelter.state} {shelter.zipcode}</p>
+          <h4>Our Mission:</h4>
+          <p>blabhhblalbkjlfka;;flkjdlkjflkajdlfjldmaidojfaije;lkjra;lkjd;klfajldkjflk</p>
+          <p><strong>Contact Us</strong></p>
+            <em>email:</em> {shelter.email} <br />
+            <em>number:</em> {shelter.number}
         </div>
         <div className="container-fluid d-flex justify-content-center">
           <div className="col-md-offset-3">
