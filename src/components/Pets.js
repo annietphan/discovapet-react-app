@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {deletePet} from '../actions/deletePet'
 
@@ -12,7 +13,7 @@ const Pets = (props) => {
 
   return (
     <div>
-      <h4>Our Adoptable Pets</h4>
+      <h4>Adoptable Pets:</h4>
       {props.pets && props.pets.map(pet =>
         <li key={pet.id}>
           {pet.name}

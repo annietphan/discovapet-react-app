@@ -6,11 +6,19 @@ class PetsContainer extends Component {
 
   render() {
     return(
-      <div className="container">
-        <Pets pets={this.props.shelter && this.props.shelter.pets}/><br /><br />
-        <PetInput shelter={this.props.shelter}/>
-
+      <>
+      <div className="container-fluid d-flex justify-content-center">
+        <div className='row'>
+          <Pets pets={this.props.shelter && this.props.shelter.pets}/><br /><br />
+        </div>
       </div>
+      <div className="container-fluid d-flex justify-content-center">
+        <div className='row'>
+          <PetInput shelter={this.props.shelter}/>
+        </div>
+      </div>
+      </>
+
     )
   }
 }

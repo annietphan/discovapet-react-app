@@ -7,6 +7,7 @@ const Shelters = (props) => {
   return (
     <div>
       <h3>All Shelters</h3>
+      <p>Don't see yours listed? Add <a href="/shelters/new">here!</a></p>
       <div className="container-fluid d-flex justify-content-center">
         <div className='row'>
           {props.shelters.map(shelter =>

@@ -1,5 +1,6 @@
 import React from 'react';
 import SheltersContainer from './containers/SheltersContainer'
+import PetsContainer from './containers/PetsContainer'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/about' component={About} />
+            <Route exact path="/pets" component={PetsContainer} />
             <SheltersContainer />
           </Switch>
         </Router>

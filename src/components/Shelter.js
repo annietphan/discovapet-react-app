@@ -22,17 +22,20 @@ const Shelter = ({match, shelters}) => {
           <p>{shelter.street_address}</p>
           <p>{shelter.city}, {shelter.state} {shelter.zipcode}</p>
         </div>
-        <div className="row">
-
-            <PetsContainer shelter={shelter}/>
-
+        <div className="container-fluid d-flex justify-content-center">
+          <div className="col-md-offset-3">
+            <PetsContainer shelter={shelter} />
+          </div>
         </div>
+
+
       </div>
+
       </React.Fragment>
     )
   } else {
     return (
-      <p>Oops! There's no shelter found.</p>
+      <p></p>
 
     )
   }
