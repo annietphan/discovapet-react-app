@@ -17,10 +17,18 @@ class PetCard extends React.Component {
   }
 
   downVote = () => {
-    const decreasedCount = this.state.count -1
-    this.setState({
-      count: decreasedCount
-    })
+
+    if (this.state.count > 0) {
+      const decreasedCount = this.state.count -1
+      this.setState({
+        count: decreasedCount
+      })
+    } else {
+      this.setState({
+        count: this.state.count
+      })
+    }
+
   }
 
   render() {
