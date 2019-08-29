@@ -39,7 +39,7 @@ class PetCard extends React.Component {
         </div>
         <div className="card-header text-dark">
           <h4>{this.props.pet.name}</h4>
-          <p><button onClick={this.downVote}>-</button> Votes: {this.state.count} <button onClick={this.upVote}>+</button></p>
+          <p><button className="btn btn-sm btn-secondary" onClick={this.downVote}>-</button> Votes: {this.state.count} <button className="btn btn-sm btn-secondary" onClick={this.upVote}>+</button></p>
         </div>
       </div>
     )

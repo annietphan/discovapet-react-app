@@ -15,12 +15,19 @@ const Pet = (props) => {
   return(
     <React.Fragment>
       <div className="container">
-          <div className='card text-center'>
-            <p style={capitalize}>{props.pet.gender} {props.pet.kind}</p>
-            <p style={capitalize}>{props.pet.size} {props.pet.breed}</p>
-            <p style={capitalize}>Age: {props.pet.age}</p>
-            <button onClick={() => handleDelete(props.pet)}>delete</button>
+
+          <h5 style={{textAlign:'center'}}>Details</h5>
+
+
+          <div className='card'>
+            <div className='card-body'>
+              <p style={capitalize}>{props.pet.gender} {props.pet.kind}</p>
+              <p style={capitalize}>{props.pet.size} {props.pet.breed}</p>
+              <p style={capitalize}>Age: {props.pet.age}</p>
+            </div>
+            <button style={{margin: '5px'}}className="btn btn-sm btn-secondary"  onClick={() => handleDelete(props.pet)}>delete</button>
           </div>
+
       </div>
     </React.Fragment>
   )
